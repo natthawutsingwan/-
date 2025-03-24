@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultBox = document.getElementById("lottery-result");
 
     // Validate input to allow only numbers
-    inputField.addEventListener("input", function () {
+    //inputField.addEventListener("input", function () {
         validateNumber(this);
     });
 
