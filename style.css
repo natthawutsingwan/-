@@ -14,13 +14,39 @@ body {
     text-align: center; /* จัดเนื้อหาทั้งหมดให้อยู่ตรงกลาง */
 }
 
+
+/* กำหนดรูปภาพพื้นหลัง */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('lottery-background.png'); /* ระบุตำแหน่งของรูปภาพ */
+    background-size: cover; /* ปรับขนาดรูปภาพให้ครอบคลุมพื้นที่ทั้งหมด */
+    background-position: center; /* จัดตำแหน่งรูปภาพให้อยู่ตรงกลาง */
+    background-repeat: no-repeat; /* ไม่ให้รูปภาพซ้ำ */
+    background-attachment: fixed; /* ทำให้พื้นหลังคงที่เมื่อเลื่อนหน้าเว็บ */
+    height: 100vh; /* กำหนดความสูงของพื้นหลังให้เต็มหน้าจอ */
+    position: relative; /* เพื่อให้สามารถวาง overlay ได้ */
+}
+
+/* สไตล์เนื้อหาในหน้าเว็บ */
+.content {
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 20%;
+    position: relative; /* ทำให้เนื้อหาอยู่เหนือ overlay */
+    z-index: 2; /* อยู่บนสุด */
+}
+
+
+
 /* Header Section */
 header.hero {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient สีส้ม-ชมพู */
+    background: linear-gradient(135deg, #ff3300, #f15005,#e76400); /* Gradient สีส้ม-ชมพู */
     color: white;
-    padding: 20px;
+    padding: 5px;
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 header h1 {
@@ -32,78 +58,6 @@ header p {
     font-size: 1.2rem;
 }
 
-/* Lottery Checker */
-.lottery-checker {
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-#lottery-input {
-    width: 200px;
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    margin-right: 10px;
-    text-align: center; /* จัดตัวเลขในช่องกรอกให้อยู่ตรงกลาง */
-}
-
-#check-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #28a745; /* สีเขียว */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#check-button:hover {
-    background-color: #218838; /* สีเขียวเข้มเมื่อ hover */
-}
-
-#lottery-result {
-    margin-top: 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-/* Main Content */
-main.lottery-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; /* จัดเนื้อหาใน main ให้อยู่ตรงกลาง */
-}
-
-section.lottery-result {
-    margin-bottom: 20px;
-}
-
-section h2 {
-    font-size: 1.5rem;
-    color: #d9534f; /* สีแดงเข้ม */
-    margin-bottom: 10px;
-}
-
-section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.lotto-number {
-    display: inline-block;
-    background-color: #007bff; /* สีน้ำเงิน */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin: 5px;
-    font-weight: bold;
-}
 
 section p {
     font-size: 1rem;
@@ -116,3 +70,35 @@ footer {
     font-size: 0.9rem;
     color: #666;
 }
+
+
+/* หัวข้อหลัก */
+.lottery-nav a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background-color: #f0f0f0;
+    border-radius: 50% 50%;
+}
+.lottery-nav a.active {
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%  50% 1%;
+}
+
+
+
+div a {
+    padding: 5px 5px; /*จัดขนาดความห่าง*/
+    font-size: 1rem; /*ขนาดตัวหนังสือ*/
+    display: flex;
+    flex-direction:row;
+}
+
+
+
+
+
+
+
+
